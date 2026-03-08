@@ -1,65 +1,34 @@
-import Image from "next/image";
+import TestCard from "@/components/TestCard";
+import { BRAND } from "@/constants/branding";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
+      <section className="rounded-3xl bg-[#0B1F3A] px-6 py-12 text-white shadow-sm sm:px-10">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/80">
+          {BRAND.centerName}
+        </p>
+        <h1 className="mt-3 text-4xl font-semibold sm:text-5xl">{BRAND.siteTitle}</h1>
+        <p className="mt-4 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">
+          Choose a test, complete the assessment, and see your result immediately on screen.
+        </p>
+      </section>
+
+      <section className="mt-10 grid gap-6 md:grid-cols-2">
+        <TestCard
+          title="English Placement Test"
+          description="A timed English placement test with 66 multiple-choice questions covering a range of grammar and vocabulary difficulty."
+          questionCountText="66 questions • 30 minutes • A1 to C1"
+          href="/test/english"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        <TestCard
+          title="SAT Placement Test"
+          description="A timed 3-stage placement test covering both English and Math, with gated progression through Foundation, SAT, and Advanced SAT."
+          questionCountText="45 questions • 30 minutes • 3 gated stages"
+          href="/test/sat"
+        />
+      </section>
+    </main>
   );
 }
