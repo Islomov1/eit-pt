@@ -18,14 +18,13 @@ export default function HomePage() {
         <TestCard
           title="English Placement Test"
           description="A timed English placement test with 66 multiple-choice questions covering a range of grammar and vocabulary difficulty."
-          questionCountText="66 questions • 30 minutes • A1 to C1"
+          questionCountText="66 questions • 30 minutes • A1 to C2"
           href="/test/english"
         />
-
         <TestCard
           title="SAT Placement Test"
-          description="A timed 3-stage placement test covering both English and Math, with gated progression through Foundation, SAT, and Advanced SAT."
-          questionCountText="45 questions • 30 minutes • 3 gated stages"
+          description="A timed placement test with separate English and Math sections, each gated across Foundation, SAT, and Advanced stages."
+          questionCountText="30 questions per section • 25 minutes • 3 gated stages"
           href="/test/sat"
         />
       </section>

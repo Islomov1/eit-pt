@@ -1,5 +1,5 @@
 import TestShell from "@/components/TestShell";
-import { englishBands, englishQuestions } from "@/data/englishQuestions";
+import { englishQuestions, englishLevelGroups } from "@/data/englishQuestions";
 
 export default function EnglishTestPage() {
   return (
@@ -7,7 +7,7 @@ export default function EnglishTestPage() {
       testType="english"
       title="English Placement Test"
       questions={englishQuestions}
-      bands={englishBands}
+      levelGroups={englishLevelGroups}
       questionsPerPage={6}
     />
   );
